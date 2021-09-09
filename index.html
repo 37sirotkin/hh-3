@@ -2387,10 +2387,10 @@
         // start/pause/resume gameplay, stop/play sounds
         if (viewable) {
           startAd();
-          music.play();
+
         } else {
           // pause
-          music.mute();
+          music.pause();
         }
       }
 
@@ -2424,6 +2424,7 @@
         endGame.once("unlock", () => {
           endGame.mute();
         });
+        music.play();
 
         music.autoUnlock = false;
         foundObjectSound.autoUnlock = false;
