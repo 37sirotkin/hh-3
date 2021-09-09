@@ -2420,7 +2420,6 @@
         });
         foundObjectSound.once("unlock", () => {
           foundObject.mute();
-          endGame.mute();
         });
         endGame.once("unlock", () => {
           endGame.mute();
@@ -2429,6 +2428,7 @@
         music.autoUnlock = false;
         foundObjectSound.autoUnlock = false;
         endGame.autoUnlock = false;
+        music.play();
 
 
         let count = 0;
